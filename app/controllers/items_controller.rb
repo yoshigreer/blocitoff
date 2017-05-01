@@ -4,7 +4,7 @@ class ItemsController < ApplicationController
   end
 
   def create
-    raise "workin"
+    # raise
 
     @item = Item.new
     @item.name = params[:item][:name]
