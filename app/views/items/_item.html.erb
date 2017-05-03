@@ -1,3 +1,4 @@
 <% @items.each do |item| %>
   <h5><%= item.name %><%= link_to "", user_item_path(@user,item), method: :delete, class: 'glyphicon glyphicon-ok' %></h5>
+  <h6><%= distance_of_time_in_words(Time.now-7.days, item.created_at) %> left to finish</h6>
 <% end %>
