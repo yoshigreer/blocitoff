@@ -20,7 +20,8 @@ users = User.all
 100.times do
   Item.create!(
     name: Faker::Lorem.sentence,
-    user: users.sample
+    user: users.sample,
+    created_at: Faker::Date.backward(100)
   )
 end
 
@@ -33,4 +34,4 @@ member = User.create!(
 
 puts "seed finished"
 puts "#{User.count} users created"
-puts "#{Item.count} wikis created"
+puts "#{Item.count} items created"
